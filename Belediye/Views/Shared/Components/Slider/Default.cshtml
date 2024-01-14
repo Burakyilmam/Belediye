@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Entity.Entities.Slider>
+
+<div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+    <div class="carousel-inner">
+        @foreach (var slider in Model)
+        {
+            <div class="carousel-item @(slider == Model.First() ? "active" : "")">
+                <img height="550" class="d-block w-100" src="@slider.Url">
+                <div class="overlay-content">
+                    <div class="col-12 pb-4">
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-around">
+                                <div class="col-2 pt-3 text-center bg-light rounded">
+                                    <div class="icon">
+                                        <img src="https://www.kestel.bel.tr/upload/rakamlarlabelediyemiz/2022_11_23-Y28lm1LpNGpzeALzsoh2.png" width="50" height="50" />
+                                    </div>
+                                    <div class="pt-2">
+                                        <b>Nüfus</b>
+                                        <p>70000</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 pt-3 text-center bg-light rounded">
+                                    <div class="icon">
+                                        <img src="https://www.kestel.bel.tr/upload/rakamlarlabelediyemiz/2022_11_23-hynsPlELUDFbD12R7YhV.png" width="50" height="50" />
+                                    </div>
+                                    <div class="pt-2">
+                                        <b>Park</b>
+                                        <p>380</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 pt-3 text-center bg-light rounded">
+                                    <div class="icon">
+                                        <img src="https://www.kestel.bel.tr/upload/rakamlarlabelediyemiz/2022_11_23-LiUjpb2BmCS4KbPucutB.png" width="50" height="50" />
+                                    </div>
+                                    <div class="pt-2">
+                                        <b>Tesis</b>
+                                        <p>65</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 pt-3 text-center bg-light rounded">
+                                    <div class="icon">
+                                        <img src="https://www.kestel.bel.tr/upload/rakamlarlabelediyemiz/2022_11_23-hR23f8YcLFQM5ZcaM9wY.png" width="50" height="50" />
+                                    </div>
+                                    <div class="pt-2">
+                                        <b>Yeşil Alan</b>
+                                        <p>3.200.000</p>
+                                    </div>
+                                </div>
+                                <div class="col-2 pt-3 text-center bg-light rounded">
+                                    <div class="icon">
+                                        <img src="https://www.kestel.bel.tr/upload/rakamlarlabelediyemiz/2022_11_23-xQc4YDnRrFpNLSsnoHwl.png" width="50" height="50" />
+                                    </div>
+                                    <div class="pt-2">
+                                        <b>Asfalt</b>
+                                        <p>5.800.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+

@@ -1,0 +1,87 @@
+﻿    <div class="row text-center d-flex justify-content-center">
+        <div class="col-sm-5 WeatherContainer bg-success p-2 mt-4 mb-4 border border-success rounded text-white">
+            <div class="col-12">@DateTime.Now</div>
+            <div class="col-12"><b style="font-size:25px">@ViewBag.city</b></div>         
+            <div class="col-12">
+                <img src="@ViewBag.iconurl" width="50" />
+            </div>
+            <div class="col-12" id="Description" data-description="@ViewBag.Description"></div>
+            <div class="col-12">@ViewBag.temperature °C</div>
+            <div class="col-12 d-flex justify-content-center">
+                <div class="col-4">
+                    <h6>Nem Oranı</h6>
+                    <div>% @ViewBag.Humidity</div>
+                </div>
+                <div class="col-4">
+                    <h6>Rüzgar Hızı</h6>
+                    <div>
+                        @ViewBag.WindSpeed
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h6>Yağmur Olasılığı</h6>
+                    <div>@ViewBag.RainProbability</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var descriptionElement = document.getElementById('Description');
+    var descriptionValue = descriptionElement.getAttribute('data-description');
+
+    function translateDescription(description) {
+        switch (description.toLowerCase()) {
+            case 'clear':
+                return 'Açık';
+            case 'clouds':
+                return 'Bulutlu';
+            case 'drizzle':
+                return 'Hafif Yağmurlu';
+            case 'rain':
+                return 'Yağmurlu';
+            case 'thunderstorm':
+                return 'Gök Gürültülü Fırtına';
+            case 'snow':
+                return 'Karlı';
+            case 'mist':
+                return 'Sisli';
+            case 'smoke':
+                return 'Dumanlı';
+            case 'haze':
+                return 'Puslu';
+            case 'dust':
+                return 'Tozlu';
+            case 'fog':
+                return 'Sis';
+            case 'sand':
+                return 'Kum Fırtınası';
+            case 'ash':
+                return 'Kül Fırtınası';
+            case 'overcast clouds':
+                return 'Kapalı Bulutlu';
+            case 'squall':
+                return 'Şiddetli Fırtına';
+            case 'tornado':
+                return 'Tornado';
+            case 'clear sky':
+                return 'Açık Gökyüzü';
+            case 'few clouds':
+                return 'Az Bulutlu';
+            case 'scattered clouds':
+                return 'Parçalı Bulutlu';
+            case 'broken clouds':
+                return 'Kırık Bulutlu';
+            case 'shower rain':
+                return 'Gökgürültülü Sağanak Yağışlı';
+            case 'heavy intensity rain':
+                return 'Yoğun Yağışlı';
+            case 'very heavy rain':
+                return 'Çok Yoğun Yağışlı';
+            default:
+                return description;
+        }
+    }
+    descriptionElement.innerHTML = translateDescription(descriptionValue);
+</script>
+
+

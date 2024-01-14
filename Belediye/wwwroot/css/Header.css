@@ -1,0 +1,246 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.TopMenu a {
+    text-decoration: none;
+}
+
+.Bars {
+    display: none;
+    width: 33.33%;
+}
+
+.Social {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+}
+
+.Logo {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Search {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    height: 75px;
+}
+
+    .Search button {
+        border: none;
+    }
+
+.BottomMenu a {
+    text-decoration: none;
+}
+
+.Left, .Right {
+    width: 40%;
+    height: 75px;
+    margin-top: -75px;
+}
+
+.Left, .Right {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Middle {
+    width: 20%;
+}
+
+.Social .fa, .Search .fa {
+    width: 35px;
+    height: 35px;
+    color: white;
+    padding: 10px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.Search .fa-search {
+    background-color: transparent;
+    color: white;
+}
+
+.SearchBtn {
+    display: none;
+}
+
+    .SearchBtn input {
+        width: 97%;
+        padding: 5px;
+        border-right: 2px solid black;
+    }
+
+.fa-bars {
+    background-color: transparent;
+    color: white;
+    padding-left: 30px;
+}
+.Bars button{
+    border:none;
+    background-color:transparent;
+}
+.SearchBtn button {
+    border: none;
+    background-color: transparent;
+}
+
+.SearchBtn .fa-search {
+    padding: 10px;
+    margin-left: -50px;
+}
+
+.SearchBtn input::placeholder {
+    padding-left: 10px;
+}
+
+.dropdown {
+    width: 50%;
+    text-align: center;
+}
+
+    .dropdown a {
+        text-decoration: none;
+        color: red;
+    }
+
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+        text-align: center;
+        width: 200px;
+    }
+
+    .dropdown:hover > .dropdown-toggle {
+        background-color: red;
+        padding: 10px;
+        font-weight: bold;
+        color: white;
+    }
+.SideBar .dropdown {
+    width: 100%;
+    text-align: center;
+}
+
+    .SideBar.dropdown a {
+        text-decoration: none;
+        color: red;
+    }
+
+    .SideBar.dropdown:hover > .SideBar .dropdown-menu {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .SideBar .dropdown:hover > .SideBar .dropdown-toggle {
+        background-color: red;
+        padding: 10px;
+        font-weight: bold;
+        color: white;
+    }
+
+.SideBar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    .SideBar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+.SideBar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.footer a{
+    text-decoration:none;
+    color:white;
+}
+@media screen and (max-height: 450px) {
+    .SideBar {
+        padding-top: 15px;
+    }
+
+        .SideBar a {
+            font-size: 18px;
+        }
+}
+
+@media (max-width: 767px) {
+    .Social, .Left, .Right {
+        display: none;
+    }
+
+    .Logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Bars {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .Search {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        height: 150px;
+    }
+}
