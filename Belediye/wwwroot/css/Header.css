@@ -117,10 +117,12 @@
     color: white;
     padding-left: 30px;
 }
-.Bars button{
-    border:none;
-    background-color:transparent;
+
+.Bars button {
+    border: none;
+    background-color: transparent;
 }
+
 .SearchBtn button {
     border: none;
     background-color: transparent;
@@ -135,28 +137,35 @@
     padding-left: 10px;
 }
 
-.dropdown {
+.Left .dropdown, .Right .dropdown {
     width: 50%;
     text-align: center;
 }
 
-    .dropdown a {
+    .Left .dropdown a, .Right .dropdown a {
         text-decoration: none;
-        color: red;
-    }
-
-    .dropdown:hover > .dropdown-menu {
-        display: block;
-        text-align: center;
-        width: 200px;
-    }
-
-    .dropdown:hover > .dropdown-toggle {
-        background-color: red;
-        padding: 10px;
-        font-weight: bold;
         color: white;
     }
+
+.Left .dropdown-menu a, .Right .dropdown-menu a {
+    text-decoration: none;
+    color: red;
+}
+
+.Left .dropdown:hover > .dropdown-menu, .Right .dropdown:hover > .dropdown-menu {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.Left .dropdown:hover > .Left .dropdown-toggle,
+.Right .dropdown:hover > .Right .dropdown-toggle {
+    background-color: red;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
 .SideBar .dropdown {
     width: 100%;
     text-align: center;
@@ -164,21 +173,30 @@
 
     .SideBar.dropdown a {
         text-decoration: none;
-        color: red;
-    }
-
-    .SideBar.dropdown:hover > .SideBar .dropdown-menu {
-        display: block;
-        text-align: center;
-        width: 100%;
-    }
-
-    .SideBar .dropdown:hover > .SideBar .dropdown-toggle {
-        background-color: red;
-        padding: 10px;
-        font-weight: bold;
         color: white;
     }
+
+.SideBar .dropdown-menu a {
+    text-decoration: none;
+    color: red;
+}
+
+.SideBar .dropdown-menu {
+    width: 300px;
+    text-align:center;
+}
+
+.SideBar.dropdown:hover > .SideBar .dropdown-menu {
+    display: block;
+    text-align: center;
+}
+
+.SideBar .dropdown:hover > .SideBar .dropdown-toggle {
+    background-color: red;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
 
 .SideBar {
     width: 0;
@@ -192,6 +210,7 @@
     transition: 0.5s;
     padding-top: 60px;
 }
+
     .SideBar a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
@@ -200,17 +219,20 @@
         display: block;
         transition: 0.3s;
     }
-.SideBar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+
+    .SideBar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }
-.footer a{
-    text-decoration:none;
-    color:white;
-}
+
 @media screen and (max-height: 450px) {
     .SideBar {
         padding-top: 15px;

@@ -9,7 +9,7 @@
             }
 }
 function openNav() {
-    document.getElementById("sideBar").style.width = "250px";
+    document.getElementById("sideBar").style.width = "300px";
 }
 
 function closeNav() {
