@@ -2,7 +2,13 @@
     margin: 0;
     padding: 0;
 }
-
+/*.TopMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}*/
 .TopMenu a {
     text-decoration: none;
 }
@@ -178,13 +184,18 @@
 
 .SideBar .dropdown-menu a {
     text-decoration: none;
-    color: red;
+    color: black;
+    font-weight:bold;
 }
 
 .SideBar .dropdown-menu {
     width: 300px;
     text-align:center;
 }
+        .SideBar .dropdown-menu a:hover {
+            color: red;
+            font-weight: bold; 
+        }
 
 .SideBar.dropdown:hover > .SideBar .dropdown-menu {
     display: block;
@@ -197,7 +208,16 @@
     font-weight: bold;
     color: white;
 }
+.SideBar .dropdown-toggle {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, font-weight 0.3s;
+}
 
+    .SideBar .dropdown-toggle:hover {
+        color: #fff;
+        font-weight: bold;
+    }
 .SideBar {
     width: 0;
     height: 100%;
